@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="600.0" maxWidth="1200.0" minHeight="200.0" minWidth="300.0" prefHeight="1200.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.alquilervehiculos.MainController">
+
+   <children>
+      <MenuBar layoutX="615.0" layoutY="161.0" prefHeight="26.0" prefWidth="115.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirFormulario" text="Coche Electrico" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarMensajeError" text="Bicicleta" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="5.0" layoutY="60.0" prefHeight="53.0" prefWidth="206.0">
+         <children>
+            <Label layoutX="-282.0" layoutY="-17.0">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <ImageView fitHeight="431.0" fitWidth="501.0" layoutX="14.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/image.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="614.0" layoutY="266.0" mnemonicParsing="false" onAction="#mostrarMensajeError" prefHeight="26.0" prefWidth="117.0" text="Bicicletas eléctricas" />
+      <Button layoutX="615.0" layoutY="216.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="26.0" prefWidth="115.0" text="Coches eléctricos" />
+      <Button layoutX="614.0" layoutY="315.0" mnemonicParsing="false" onAction="#salirAplicacion" prefHeight="26.0" prefWidth="117.0" text="Salir" />
+      <Label layoutX="71.0" layoutY="43.0" text="Bienvenidos a RentCar">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

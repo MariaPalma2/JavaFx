@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.alquilervehiculos.CarRentalFormController">
+   <children>
+      <Label layoutX="33.0" layoutY="31.0" text="Datos del cliente">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="86.0" prefHeight="17.0" prefWidth="61.0" text="Nombre:" />
+      <TextField fx:id="nombreField" layoutX="140.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0">
+         <tooltip>
+            <Tooltip text="Introduzca su nombre" />
+         </tooltip>
+      </TextField>
+      <Label layoutX="66.0" layoutY="132.0" prefHeight="17.0" prefWidth="61.0" text="Apellidos: " />
+      <TextField fx:id="apellidoField" layoutX="140.0" layoutY="128.0" prefHeight="25.0" prefWidth="200.0">
+         <tooltip>
+            <Tooltip text="Introduzca sus apellidos" />
+         </tooltip>
+      </TextField>
+      <Label layoutX="469.0" layoutY="86.0" text="Telefono: " />
+      <TextField fx:id="telefonoField" layoutX="548.0" layoutY="82.0" />
+      <Label layoutX="469.0" layoutY="132.0" text="DNI: " />
+      <TextField fx:id="dniField" layoutX="548.0" layoutY="128.0" />
+      <Label layoutX="29.0" layoutY="189.0" text="Datos de Alquiler">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="253.0" text="Inicio alquiler:" />
+      <DatePicker fx:id="inicioDatePicker" layoutX="163.0" layoutY="244.0" />
+      <Label layoutX="452.0" layoutY="253.0" text="Fin alquiler:" />
+      <DatePicker fx:id="finDatePicker" layoutX="535.0" layoutY="244.0" />
+      <ComboBox fx:id="tipoVehiculoBox" layoutX="165.0" layoutY="312.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="4x4" />
+               <String fx:value="SUV" />
+               <String fx:value="Mediano" />
+               <String fx:value="Pequeño" />
+               <String fx:value="Grande" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+
+      <Label layoutX="60.0" layoutY="316.0" text="Tipo de vehiculo: " />
+      <CheckBox fx:id="cableCargaBox" layoutX="816.0" layoutY="253.0" mnemonicParsing="false" text="Cable de carga" />
+      <CheckBox fx:id="cancelacionBox" layoutX="225.0" layoutY="466.0" mnemonicParsing="false" text="Cancelación gratuita" />
+      <CheckBox fx:id="seguroBox" layoutX="60.0" layoutY="498.0" mnemonicParsing="false" text="Seguro a todo riesgo" />
+      <CheckBox fx:id="sillaBebeBox" layoutX="225.0" layoutY="498.0" mnemonicParsing="false" text="Silla bebé" />
+      <CheckBox fx:id="noPrecisaBox" layoutX="413.0" layoutY="466.0" mnemonicParsing="false" text="No precisa" />
+      <Button fx:id="btnCancelar" layoutX="760.0" layoutY="540.0" mnemonicParsing="false" onAction="#irAlMenuPrincipal" text="Cancelar" />
+      <Button fx:id="btnReservar" layoutX="857.0" layoutY="540.0" mnemonicParsing="false" onAction="#completarReserva" text="Reservar" />
+      <Label layoutX="449.0" layoutY="324.0" text="Edad del conducto: " />
+      <Label layoutX="807.0" layoutY="315.0" text="Nº km: " />
+      <TextField fx:id="kmField" layoutX="857.0" layoutY="303.0" />
+      <Label layoutX="29.0" layoutY="397.0" text="Servicios extras">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cadenasBox" layoutX="60.0" layoutY="466.0" mnemonicParsing="false" text="Cadenas" />
+      <Spinner fx:id="edadSpinner" layoutX="568.0" layoutY="320.0" prefWidth="70.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory initialValue="18" max="100" min="18" />
+         </valueFactory>
+      </Spinner>
+
+   </children>
+</Pane>
