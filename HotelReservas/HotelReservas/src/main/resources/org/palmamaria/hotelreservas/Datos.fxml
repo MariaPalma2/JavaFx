@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.hotelreservas.DatosController">
+   <children>
+      <Pane layoutX="14.0" prefHeight="516.0" prefWidth="590.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Datos del cliente">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDni" layoutX="29.0" layoutY="65.0" text="DNI" />
+            <TextField fx:id="dniTextField" layoutX="92.0" layoutY="61.0" />
+            <Label fx:id="labelNombre" layoutX="273.0" layoutY="65.0" text="Nombre" />
+            <TextField fx:id="nombreTextField" layoutX="330.0" layoutY="61.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label layoutX="25.0" layoutY="108.0" text="Dirección" />
+            <TextField fx:id="direccionTextField" layoutX="92.0" layoutY="104.0" prefHeight="25.0" prefWidth="466.0" />
+            <Label layoutX="92.0" layoutY="151.0" text="Localidad" />
+            <TextField fx:id="localidadTextField" layoutX="158.0" layoutY="147.0" prefHeight="25.0" prefWidth="126.0" />
+            <Label layoutX="325.0" layoutY="151.0" text="Provincia" />
+            <TextField fx:id="provinciaTextField" layoutX="390.0" layoutY="147.0" prefHeight="25.0" prefWidth="172.0" />
+            <Label layoutX="14.0" layoutY="189.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="232.0" text="Fecha de llegada" />
+            <DatePicker fx:id="dateLegada" layoutX="123.0" layoutY="228.0" prefHeight="25.0" prefWidth="126.0" />
+            <Label layoutX="295.0" layoutY="232.0" text="Fecha de salida" />
+            <DatePicker fx:id="dateSalida" layoutX="413.0" layoutY="228.0" prefHeight="25.0" prefWidth="126.0" />
+            <Label layoutX="25.0" layoutY="262.0" text="Número de habitaciones" />
+            <ChoiceBox fx:id="habitacionesChoiseBox" layoutX="167.0" layoutY="258.0" prefHeight="25.0" prefWidth="44.0" />
+            <Label layoutX="245.0" layoutY="262.0" text="Tipo de habitación" />
+            <CheckBox fx:id="checkBoxFumador" layoutX="465.0" layoutY="262.0" mnemonicParsing="false" text="Fumador" />
+            <Label layoutX="15.0" layoutY="305.0" text="Régimen">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="189.0" text="Datos de la reserva">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkBox1" layoutX="25.0" layoutY="350.0" mnemonicParsing="false" text="Alojamiento y desayuno" />
+            <CheckBox fx:id="checkBox2" layoutX="25.0" layoutY="377.0" mnemonicParsing="false" text="Media pensión" />
+            <CheckBox fx:id="checkBox3" layoutX="215.0" layoutY="350.0" mnemonicParsing="false" text="Pensión completa" />
+            <Button fx:id="limpiarBoton" layoutX="3.0" layoutY="465.0" mnemonicParsing="false" onAction="#limpiarDatos" text="Limpiar" />
+            <Button fx:id="botonAceptar" layoutX="398.0" layoutY="465.0" mnemonicParsing="false" onAction="#completarReserva" text="Aceptar" />
+            <Button layoutX="474.0" layoutY="465.0" mnemonicParsing="false" text="Cancelar" />
+            <ComboBox fx:id="tipoHabitacionComboBox" layoutX="348.0" layoutY="258.0" prefHeight="25.0" prefWidth="101.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

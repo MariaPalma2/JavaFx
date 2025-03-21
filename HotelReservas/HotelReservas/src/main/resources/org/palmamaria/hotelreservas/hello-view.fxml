@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="600.0" maxWidth="1200.0" minHeight="200.0" minWidth="300.0" prefHeight="1200.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.hotelreservas.ReservaController">
+   <children>
+      <Label layoutX="29.0" layoutY="40.0" text="Hotel Reservas">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font></Label>
+      <ImageView fitHeight="412.0" fitWidth="574.0" layoutX="29.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagenes/reserva.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="idReservas" layoutX="29.0" layoutY="113.0" mnemonicParsing="false" onAction="#reservar" text="Reservas" />
+      <Button fx:id="idSalir" layoutX="120.0" layoutY="113.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+   </children>
+</Pane>
