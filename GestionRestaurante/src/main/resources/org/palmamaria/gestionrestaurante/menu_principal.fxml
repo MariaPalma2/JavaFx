@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="474.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.gestionrestaurante.controllers.MenuPrincipalController">
+    <children>
+
+        <Button fx:id="btnClientes" layoutX="36.0" layoutY="91.0" onAction="#abrirGestionClientes" prefHeight="34.0" prefWidth="125.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold;" text="Gestión de Clientes" />
+
+        <Button fx:id="btnGestionProductos" layoutX="200.0" layoutY="91.0" onAction="#abrirGestionProductos" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Gestión de Productos" />
+
+        <Button fx:id="btnGestionPedidos" layoutX="367.0" layoutY="91.0" onAction="#abrirGestionPedidos" prefHeight="34.0" prefWidth="125.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold;" text="Gestión de Pedidos" />
+
+        <Label layoutX="36.0" layoutY="29.0" prefHeight="34.0" prefWidth="539.0" text="SISTEMA DE GESTIÓN DE PEDIDOS DE UN RESTAUTANTE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="304.0" fitWidth="553.0" layoutX="35.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagen/restaurante.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

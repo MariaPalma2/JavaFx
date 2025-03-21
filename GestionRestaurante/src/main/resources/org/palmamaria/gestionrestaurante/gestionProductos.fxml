@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="592.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.gestionrestaurante.controllers.ProductosController">
+    <children>
+        <!-- Título -->
+        <Label layoutX="14.0" layoutY="14.0" text="Gestión de Productos">
+            <font>
+                <Font name="Arial" size="24" />
+            </font>
+        </Label>
+
+        <!-- Campos de texto para agregar/modificar productos -->
+        <Label layoutX="20" layoutY="60" text="Nombre:" />
+        <TextField fx:id="txtNombre" layoutX="100" layoutY="55" prefWidth="200" />
+
+        <Label layoutX="20" layoutY="100" text="Categoria" />
+        <TextArea fx:id="txtDescripcion" layoutX="100" layoutY="95" prefHeight="26.0" prefWidth="200" />
+
+        <Label layoutX="20" layoutY="175" text="Precio:" />
+        <TextField fx:id="txtPrecio" layoutX="100" layoutY="170" prefWidth="200" />
+      <CheckBox fx:id="cbDisponibilidad" layoutX="108.0" layoutY="210.0" mnemonicParsing="false" />
+
+        <Label layoutX="20" layoutY="210" text="Disponibilidad:" />
+
+        <!-- Botones con el nuevo estilo -->
+        <Button fx:id="btnAgregar" layoutX="20" layoutY="270" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Agregar Producto" />
+        <Button fx:id="btnModificar" layoutX="160" layoutY="270" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Modificar Producto" />
+        <Button fx:id="btnEliminar" layoutX="300" layoutY="270" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Eliminar Producto" />
+        <Button fx:id="btnGenerarInformeProductos" text="Generar Informe de Clientes" onAction="#generarInformeProductos" />
+
+        <!-- Campo de búsqueda por ID -->
+        <Label layoutX="20" layoutY="310" text="Buscar Producto por ID:" />
+        <TextField fx:id="txtBuscarId" layoutX="160" layoutY="305" prefWidth="200" />
+        <Button fx:id="btnBuscar" layoutX="380" layoutY="305" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Buscar" />
+
+        <!-- TableView -->
+        <TableView fx:id="tablaProductos" layoutX="20" layoutY="352.0" prefHeight="208.0" prefWidth="547.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="100" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="99.39997100830078" text="Nombre" />
+                <TableColumn fx:id="colDescripcion" prefWidth="141.20001220703125" text="Descripción" />
+                <TableColumn fx:id="colPrecio" prefWidth="73.4000244140625" text="Precio" />
+                <TableColumn fx:id="colDisponibilidad" prefWidth="135.4000244140625" text="Disponibilidad" />
+            </columns>
+        </TableView>
+
+        <!-- Botón Volver -->
+        <Button layoutX="19.0" layoutY="566.0" onAction="#abrirMenuPrincipal" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Volver" />
+    </children>
+</AnchorPane>

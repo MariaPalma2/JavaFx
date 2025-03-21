@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600" prefWidth="700" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.palmamaria.gestionrestaurante.controllers.ClientesController">
+    <children>
+        <!-- Título -->
+        <Label layoutX="50" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gestión de Clientes" />
+
+        <!-- Campos de Texto -->
+        <Label layoutX="50" layoutY="80" text="Nombre:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="txtNombre" layoutX="150" layoutY="75" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="130" text="Teléfono:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="txtTelefono" layoutX="150" layoutY="125" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="180" text="Dirección:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="txtDireccion" layoutX="150" layoutY="175" prefWidth="300" />
+
+        <!-- Botones -->
+        <Button fx:id="btnAgregar" layoutX="50" layoutY="230" prefWidth="150" text="Agregar" />
+        <Button fx:id="btnModificar" layoutX="220" layoutY="230" prefWidth="150" text="Modificar" />
+        <Button fx:id="btnEliminar" layoutX="391.0" layoutY="229.0" prefHeight="26.0" prefWidth="135.0" text="Eliminar" />
+        <Button fx:id="btnGenerarInformeClientes" text="Generar Informe de Clientes" onAction="#generarInformeClientes" />
+
+
+        <!-- Campo para ingresar el ID de búsqueda -->
+        <TextField fx:id="txtBuscarId" layoutX="679.0" layoutY="125.0" prefHeight="26.0" prefWidth="93.0" />
+
+        <Button fx:id="btnBuscar" layoutX="533.0" layoutY="125.0" onAction="#buscarClientePorId" prefHeight="26.0" prefWidth="126.0" text="Buscar por ID" />
+
+        <!-- Tabla de Clientes (Ajustada al 80% del ancho) -->
+        <TableView fx:id="tablaClientes" layoutX="50" layoutY="300" prefHeight="250" prefWidth="900">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="80" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="300" text="Nombre" />
+                <TableColumn fx:id="colTelefono" prefWidth="250" text="Teléfono" />
+                <TableColumn fx:id="colDireccion" prefWidth="300" text="Dirección" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
